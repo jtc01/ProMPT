@@ -1,7 +1,10 @@
 from langchain_ollama.llms import OllamaLLM
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
+from dotenv import load_dotenv
 import os
+
+load_dotenv()
 
 class AIAgent:
     def __init__(self):
@@ -11,12 +14,18 @@ class AIAgent:
         # Use ChatGPT for the output manager
         # You'll need to set your OpenAI API key as an environment variable
         # or pass it directly here
+        
+        """
         self.output_llm = ChatOpenAI(
             model="gpt-3.5-turbo",  # Most commonly used ChatGPT model
             temperature=0.7,
-            openai_api_key=os.getenv("OPENAI_API_KEY")  # Set this environment variable
+            openai_api_key=os.getenv("OPEN_API_KEY")  # Set this environment variable
         )
-        
+        """
+
+        self.output_llm = OllamaLLM(model="llama3.2")
+
+
         self.input_manager_prompt = """
         You are an expert in prompt engineering for LLMs. You will be given a prompt for an AI chatbot asked by a human, and your job is to rephrase the prompt so that the AI chatbot will provide better responses.
 
@@ -127,6 +136,8 @@ class AIAgent:
                 return {"approved": False, "feedback": response}
 
 def main():
+
+
     agent = AIAgent()
     
     print("AI Agent initialized. Enter 'x' to quit.")
