@@ -118,8 +118,7 @@ class AIAgent:
             iterations += 1
         
         # Step 4: Generate the final response using the approved prompt
-        # NOW USING CHATGPT!
-        final_response = self.output_llm.invoke(optimized_prompt).content
+        final_response = self.output_llm.invoke(optimized_prompt)
         
         return final_response
     
