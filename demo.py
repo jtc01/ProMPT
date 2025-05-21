@@ -45,6 +45,7 @@ def demo_v2():
     # Example inputs for different workflows
     examples = {
         "simple_task": "How do I make a chocolate cake?",
+        "complex_task": "Explain the environmental impact of plastic pollution and possible solutions",
         "unclear_task": "Roses are red, violets are blue",
         "object_based": "Compare these two cars: https://example.com/car1 and https://example.com/car2",
         "opinion_based": "Is AI consciousness possible?"

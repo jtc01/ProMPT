@@ -11,18 +11,21 @@ from agents import (
     DelegatorAgent,
     # Generators
     SimpleTaskPromptGenerator, 
+    ComplexTaskPromptGenerator,
     UnclearTaskPromptGenerator,
     ObjectBasedPromptGenerator,
     OpinionBasedPromptGenerator,
     GenericPromptGenerator,
     # Reviewers
     SimpleTaskReviewer,
+    ComplexTaskReviewer,
     UnclearTaskReviewer,
     ObjectBasedReviewer,
     OpinionBasedReviewer,
     GenericReviewer,
     # Editors
     SimpleTaskEditor,
+    ComplexTaskEditor,
     UnclearTaskEditor,
     ObjectBasedEditor,
     OpinionBasedEditor,
@@ -53,6 +56,7 @@ class ProMPT:
         # Generators
         self.generators = {
             "simple_task": SimpleTaskPromptGenerator(),
+            "complex_task": ComplexTaskPromptGenerator(),
             "unclear_task": UnclearTaskPromptGenerator(),
             "object_based": ObjectBasedPromptGenerator(),
             "opinion_based": OpinionBasedPromptGenerator(),
@@ -62,6 +66,7 @@ class ProMPT:
         # Reviewers
         self.reviewers = {
             "simple_task": SimpleTaskReviewer(),
+            "complex_task": ComplexTaskReviewer(),
             "unclear_task": UnclearTaskReviewer(),
             "object_based": ObjectBasedReviewer(),
             "opinion_based": OpinionBasedReviewer(),
@@ -71,6 +76,7 @@ class ProMPT:
         # Editors
         self.editors = {
             "simple_task": SimpleTaskEditor(),
+            "complex_task": ComplexTaskEditor(),
             "unclear_task": UnclearTaskEditor(),
             "object_based": ObjectBasedEditor(),
             "opinion_based": OpinionBasedEditor(),

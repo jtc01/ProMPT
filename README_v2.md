@@ -9,6 +9,7 @@ ProMPT v2 uses a multi-agent approach with specialized workflows:
 1. **Delegator** - Analyzes user input and routes it to the appropriate workflow
 2. **Specialized Prompt Generators** - Optimize different types of user requests:
    - Simple Task Generator - For clear, straightforward requests
+   - Complex Task Generator - For multi-step or multi-aspect requests requiring structure
    - Unclear Task Generator - For ambiguous inputs requiring intent inference
    - Object-Based Generator - For requests involving specific objects or data analysis
    - Opinion-Based Generator - For subjective questions requiring balanced perspective

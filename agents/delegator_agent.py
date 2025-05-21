@@ -16,17 +16,17 @@ class DelegatorAgent(BaseAgent):
         User input: {user_input}
         
         Analyze the input and classify it into one of the following categories:
-        1. "simple_task" - Clear, straightforward requests where the task is explicit
-           Example: "How do I make pizza?" or "What is photosynthesis?"
+        1. "simple_task" - Clear, straightforward requests where the task is explicit or reasonably inferred
+           Example: "How to make pizza?" or "What is photosynthesis?"
            
         2. "unclear_task" - Inputs where the user's intent is ambiguous or implicit
            Example: Just sharing a poem without context, or "Here's some text I found..."
            
-        3. "object_based" - Requests that involve specific objects, links, or data to analyze
+        3. "object_based" - Requests that involve specific objects, links, or data to analyze, which should be preserved in the optimized prompt
            Example: "Compare these two products" or "Analyze this data set"
            
         4. "opinion_based" - Requests asking for subjective judgments or personal views
-           Example: "What do you think about modern art?" or "Is AI consciousness possible?"
+           Example: "What do you think about modern art?" or "Is AI consciousness possible?" or "Who should I vote for?"
            
         5. "other" - Any inputs that don't clearly fit the above categories
         
